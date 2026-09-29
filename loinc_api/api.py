@@ -61,7 +61,6 @@ class LOINCAPI:
             response = requests.get(url, auth=self.auth, headers=self.headers, params=formatted_params)
             # Log detailed information about the request
             logger.info(f"Request URL: {response.request.url}")
-            logger.info(f"Request headers: {response.request.headers}")
             
             # Check if there was an error and log more details
             if response.status_code != 200:
